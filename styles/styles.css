@@ -1,0 +1,155 @@
+/*In mobile, 100px are 150px*/
+
+*{
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    word-wrap: break-word;
+}
+
+body{
+    display: flex;
+}
+
+.division, #niveles > div div, input[type="button"]{
+    border:1px solid;
+}
+
+.division, #niveles div div:first-child, #cuadroDeDialogo > div{
+    padding: 9px;
+}
+
+.header img{
+    height: 50px;
+}
+
+.body{
+    border-top: none;
+}
+
+hr{
+    margin: 16px 0px;
+}
+
+p:first-of-type ~ p{
+    margin-top: 16px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.resizableTable{
+    table-layout: fixed;
+    width: 100%;
+}
+
+.resizableTable tr:first-child{
+    font-weight: bold;
+}
+
+.resizableTable td{
+    border:1px solid;
+    padding: 4px 6px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.tab{
+    display: block;
+    margin-left: 40px;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
+
+.division{
+    overflow: auto;
+}
+
+#materias{
+    height: 678px;
+    width: 1328px;
+}
+
+.contenedorMaterias img{
+    width: 162px;
+}
+
+#niveles {
+    width: 100px;
+}
+
+#niveles > div{
+    display:flex;
+    flex-direction: row;
+    margin-top: -1px;
+}
+
+#niveles > div:first-child{
+    margin-top: 0;
+}
+
+#niveles > div div{
+    height: 99px;
+}
+
+#niveles div div:first-child{
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 99px;
+}
+
+#niveles div div:last-child{
+    border-left: none;
+}
+
+input[type="button"]{
+    background:white;
+}
+
+input[type="button"], select, input[type="text"]{
+    margin-top: 9px;
+}
+
+input[type="button"], option, input[type="text"]{
+    font-size:16px;
+}
+
+#cuadroDeDialogo{
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+}
+
+
+#cuadroDeDialogo > div{
+    background: #ffffbf;
+    display: flex;
+    flex-direction: column;
+}
+
+#cuadroDeDialogo > div div{
+    display: flex;
+    justify-content: space-between;
+}
+
+select, input[type="text"], input[value="Aceptar"]{
+    display: none;
+}
