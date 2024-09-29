@@ -118,11 +118,11 @@ $(document).ready(function() {
 
             const nivel = niveles[i];
 
-            if (cantidadesDeMaterias[i] % 8 == 0 && cantidadesDeMaterias[i] != 0) {
+            if (cantidadesDeMaterias[i] % 9 == 0 && cantidadesDeMaterias[i] != 0) {
                 $(nivel).find("div").css("height", parseInt($(nivel).find("div").css("height")) + 100 + "px");
                 $(nivel).find("div:last-child p").append("<br>");
             }
-            else if (cantidadesDeMaterias[i] < 9 && cantidadesDeMaterias[i] + 1 > Math.max(...cantidadesDeMaterias)) {
+            else if (cantidadesDeMaterias[i] < 10 && cantidadesDeMaterias[i] + 1 > Math.max(...cantidadesDeMaterias)) {
                 $("#niveles").width($("#niveles").width() + 162);
             }
 
@@ -146,11 +146,11 @@ $(document).ready(function() {
 
                 cantidadesDeMaterias[indiceNivel]--;
 
-                if (cantidadesDeMaterias[indiceNivel] != 0 && cantidadesDeMaterias[indiceNivel] % 8 == 0) {
+                if (cantidadesDeMaterias[indiceNivel] != 0 && cantidadesDeMaterias[indiceNivel] % 9 == 0) {
                     $(nivel).find("div").css("height", parseInt($(nivel).find("div").css("height")) - 100 + "px");
                     $(nivel).find("div:last-child p br:last-of-type").remove();
                 }
-                else if (!cantidadesDeMaterias.includes(cantidadDeMateriasMayor) && cantidadesDeMaterias[indiceNivel] < 8) {
+                else if (!cantidadesDeMaterias.includes(cantidadDeMateriasMayor) && cantidadesDeMaterias[indiceNivel] < 9) {
                     $("#niveles").width($("#niveles").width() - 162);
                 }
             });
